@@ -1,0 +1,20 @@
+[Unit]
+Description=Minecraft Fabric Server
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=brianlidesign
+WorkingDirectory=/home/brianlidesign/mc-fabric
+ExecStart=/home/brianlidesign/mc-fabric/start.sh
+Restart=on-failure
+RestartSec=10
+Nice=5
+LimitNOFILE=100000
+
+# If you want to type commands later with systemctl kill --signal=SIGINT etc.
+KillSignal=SIGINT
+TimeoutStopSec=60
+
+[Install]
+WantedBy=multi-user.target
