@@ -99,25 +99,19 @@ The goal is a clean, GitHub-friendly setup that avoids committing huge or sensit
 
 **Start/Stop/Restart**
 
-    ```
     sudo systemctl start minecraft
     sudo systemctl stop minecraft
     sudo systemctl restart minecraft
-    ```
 
 **View Logs**
 
 Follow logs live (this is the “console output” when using systemd):
 
-    ```
     sudo journalctl -u minecraft -f
-    ```
 
 View recent logs:
 
-    ```
     sudo journalctl -u minecraft -n 200 --no-pager
-    ```
 
 **Backups**
 
@@ -135,38 +129,28 @@ Backups include:
 
 Run:
 
-    ```
     ./scripts/backup.sh
-    ```
 
 Backups are written to:
 
-    ```
     ~/mc-backups/
-    ```
 
 Override backup location:
 
-    ```
     BACKUP_DIR=~/backups ./scripts/backup.sh
-    ```
 
 **Update Fabric**
 
 This updates Fabric server files for a target Minecraft version (example below uses 1.21.1):
 
-    ```
     ./scripts/update-fabric.sh 1.21.1
-    ```
 
 Recommended update flow:
 
-    ```
     sudo systemctl stop minecraft
     ./scripts/backup.sh
     ./scripts/update-fabric.sh 1.21.1
     sudo systemctl start minecraft
-    ```
 
 Mods are not auto-updated. Many mods must be updated per Minecraft version.
 
@@ -174,9 +158,7 @@ Mods are not auto-updated. Many mods must be updated per Minecraft version.
 
 Datapacks must be placed in the world folder:
 
-    ```
     ~/mc-fabric/world/datapacks/
-    ```
 
 Each datapack should be either:
 
