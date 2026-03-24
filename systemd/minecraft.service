@@ -4,9 +4,9 @@ After=network-online.target
 Wants=network-online.target
 
 [Service]
-User=brianlidesign
-WorkingDirectory=/home/brianlidesign/mc-fabric
-ExecStart=/home/brianlidesign/mc-fabric/start.sh
+User=steve
+WorkingDirectory=/home/steve/mc-fabric
+ExecStart=/home/steve/mc-fabric/start.sh
 Restart=on-failure
 RestartSec=10
 Nice=5
