@@ -93,7 +93,8 @@ The goal is a clean, GitHub-friendly setup that avoids committing huge or sensit
     sudo systemctl status minecraft --no-pager
     ```
 
-    > [!WARNING] Do not run java -jar ... manually if systemd is managing the server, or you may start multiple servers and cause lag/port conflicts.
+> [!WARNING]
+> Do not run java -jar ... manually if systemd is managing the server, or you may start multiple servers and cause lag/port conflicts.
 
 ## Usage
 
